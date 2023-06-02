@@ -17,9 +17,7 @@
     <%= react_component("molecules/logsEditCards/LogsEditCards", {booksDatas: @books}) %>
 
 
-    <div class="pagenagte-container__pagenate">
-      <%= will_paginate @books  %>
-    </div>
+    <%= will_paginate @books, previous_label: h("<"), next_label: h(">")   %>
   </div>
 
 

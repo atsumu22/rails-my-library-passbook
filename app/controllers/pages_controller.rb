@@ -18,6 +18,6 @@ class PagesController < ApplicationController
   end
 
   def bookmarks
-    @books = Book.where(user: current_user, status: 1)
+    @books = Book.where(user: current_user, status: 1).order(:updated_at).paginate(page: params[:page], per_page: 10)
   end
 end

@@ -16,7 +16,6 @@ const BookmarkCards = (props) => {
 };
 
 const SContaienr = styled.div`
-  margin-bottom: 100px;
 `;
 
 const SPlaceHolder = styled.div`
