@@ -14,7 +14,7 @@ class PagesController < ApplicationController
   end
 
   def logsedit
-    @books = Book.where(user: current_user, status: 0).paginate(page: params[:page], per_page: 10)
+    @books = Book.where(user: current_user, status: 0).order(:updated_at).paginate(page: params[:page], per_page: 10)
   end
 
   def bookmarks

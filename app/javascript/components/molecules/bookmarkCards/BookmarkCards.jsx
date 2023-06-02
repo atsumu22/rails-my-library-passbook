@@ -10,7 +10,7 @@ const BookmarkCards = (props) => {
 
   return (
     <SContaienr>
-      {booksFromServer.length > 0 ? booksFromServer.map((bookData) => <BookmarkCard bookData={bookData} key={bookData.id}/>) : <SPlaceHolder><h2>ブックマークには</h2><h2>まだ何も保存されていません</h2></SPlaceHolder> }
+      {booksFromServer.length > 0 ? booksFromServer.map((bookData) => <BookmarkCard bookData={bookData} key={bookData.id}/>) : <SPlaceHolder><h3>ブックマークにはまだ何も保存されていません</h3></SPlaceHolder> }
     </SContaienr>
   );
 };
@@ -21,7 +21,14 @@ const SContaienr = styled.div`
 
 const SPlaceHolder = styled.div`
   margin: 40px 14px 14px 14px;
-  text-align: center;
+  text-align: left;
+  background-color: #fff;
+  height: 150px;
+  border-radius: 15px;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `;
 
 export default BookmarkCards;
