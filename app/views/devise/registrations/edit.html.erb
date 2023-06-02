@@ -11,7 +11,6 @@
   <div class="form-container">
 
     <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
-      <%= f.error_notification %>
 
       <div class="form-inputs">
 
@@ -72,7 +71,7 @@
     </div>
   </div>
 
-  <%= link_to :back, class: "btn btn-back" do %>
+  <%= link_to profile_path, class: "btn btn-back" do %>
    <p class="mb-0"><i class="fa-solid fa-chevron-left"></i> 前の画面に戻る</p>
   <% end %>
 
