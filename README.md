@@ -1,15 +1,16 @@
 # 📚 Library Passbook
 
-SAMPOMPOM is a stamp rally generator to help support local shopping streets (shotengai = 商店街). 
-A stamp rally is one of the ways to attract people to the shopping streets. However, organizing a stamp rally event is time consuming for most people. This app works to reduce the amount of time needed to prepare stamp rally events. 
+I like to visit a library in my neighborhood with my son and borrow a few books every two weeks.
+One day, one question has occurred to me, how much would it cost if I bought every single book which I borrowed from the library...
+So, I created the app which helps me track books with its price like a passbook.
+Someday, I'm expecting, it makes my son like reading books and gives us a sense of accomplishment!
 
- 
-All the user needs to do is input the information of the rally they want to host. A QR code is generated with a printing option for participating stores to display.  
- 
-SAMPOMPOM also works for those who want to experience local life in Japan. 
-Participants for the stamp rally can enjoy visiting the local shotengai - collecting the rally stamps via the in-store QR code. Once all the stamps are collected, they can redeem a reward which makes the participants’ local trip a little more sweeter. 
+![Projects - Library Passbookのコピー](https://github.com/atsumu22/rails-my-library-passbook/assets/112766207/e3952866-f0ed-4391-85d9-548fe124d046)
+<br>
 
-![sampompom_screenshots](https://user-images.githubusercontent.com/112766207/225324881-e93c8af5-3bcd-4d83-8997-9d23fe05764a.png)
+We can make the book logs with keywords searching or scanning the barcode.
+![Projects - Library Passbookのコピ２ー (1)](https://github.com/atsumu22/rails-my-library-passbook/assets/112766207/5b8822e4-4c5e-40c7-a738-466eb8cea010)
+
 <br>
 App home: https://library-passbook.herokuapp.com
    
@@ -40,26 +41,15 @@ rails s
 ./bin/webpacker-dev-server
 ```
 
-
 ## Built With
 - [Rails 7](https://guides.rubyonrails.org/) - Backend / Front-end
-- [Stimulus JS](https://stimulus.hotwired.dev/) - Front-end JS
+- [React](https://react.dev/) - Front-end JS
 - [Heroku](https://heroku.com/) - Deployment
 - [PostgreSQL](https://www.postgresql.org/) - Database
 - [Bootstrap](https://getbootstrap.com/) & [SCSS](https://sass-lang.com/) — Styling
 - [Figma](https://www.figma.com) — Prototyping
 
-## Acknowledgements
-This app was inspired by a stamp rally event held in my neighborhood. 
-
-## The Origin of The Idea
-The shopping street I used to love visiting has disappeared in the last few years. It was heartbreaking to see these shops turned into new, boring buildings devoid of any character. The old local shopping streets in Japan will likely disappear in the near future.  “I want to help revitalize these shopping streets with Sampompom.”
-
-## Team Members
-- [Maria Cosmen](https://github.com/mcosme000)
-- [JayzT-DevZJP](https://github.com/JayzT-DevZJP)
-- [M'ma K](https://github.com/MKaiKai)
-- [Junsuke Watanabe](https://github.com/atsumu22)
+※used [react-rails gem](https://github.com/reactjs/react-rails) to handle react-component on Rails.
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
