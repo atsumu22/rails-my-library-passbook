@@ -81,7 +81,7 @@ const Scanner = (props) => {
       </SScannerContainer>
       <SNotation>☝️☝️☝️</SNotation>
       <SNotation>
-        987から始まる上段のバーコードを画面に合わせてスキャンしてください
+        978から始まる上段のバーコードを画面に合わせてスキャンしてください
       </SNotation>
     </div>
   );
