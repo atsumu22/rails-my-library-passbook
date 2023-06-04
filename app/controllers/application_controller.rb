@@ -30,6 +30,7 @@ class ApplicationController < ActionController::Base
     response.set_header('X-CSRF-Token', form_authenticity_token)
   end
 
+
   private
 
   def skip_pundit?

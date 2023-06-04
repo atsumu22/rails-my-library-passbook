@@ -2,7 +2,8 @@ import React, { useState } from "react";
 import Scanner from "./Scanner";
 import BookCardResult from "../molecules/barcodeResults/BookCardResult";
 
-const ScannerIndex = () => {
+const ScannerIndex = (props) => {
+  const { url } = props;
   const [camera, setCamera] = useState(true);
   const [result, setResult] = useState(null);
 
@@ -17,7 +18,7 @@ const ScannerIndex = () => {
       {camera && <Scanner onDetected={onDetected} />}
       <div>
         {/* {result && <BookCardResult result={result} />} */}
-        {result && <BookCardResult result={result} />}
+        {result && <BookCardResult result={result} url={url} />}
       </div>
     </section>
   );

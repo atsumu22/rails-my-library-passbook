@@ -7,7 +7,7 @@ import { jsx, css } from "@emotion/react";
 import styled from "@emotion/styled";
 
 const BookCardResult = (props) => {
-  const { result } = props;
+  const { result, url } = props;
   const [ isLoaded, setIsLoaded ] = useState(false);
   const [ book, setBook ] = useState();
 
@@ -53,7 +53,7 @@ const BookCardResult = (props) => {
   } else {
     return (
       <div>
-        { book ?  <BookCard book={book} /> : <SNotFound><h2>本情報が取得できませんでした。キーワード検索をご利用ください。</h2></SNotFound> }
+        { book ?  <BookCard book={book} url={url} /> : <SNotFound><h2>本情報が取得できませんでした。キーワード検索をご利用ください。</h2></SNotFound> }
       </div>
     );
   }

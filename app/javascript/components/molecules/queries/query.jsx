@@ -5,7 +5,8 @@ import styled from "@emotion/styled";
 import QueryResults from '../queryResults/QueryResults';
 import SelectButton from '../../atoms/buttons/SelectButtons';
 
-const Query = () => {
+const Query = (props) => {
+  const { url } = props;
   const [ titleSearch, setTitleSearch ] = useState(true);
   const [ authorSearch, setAuthorSearch ] = useState(false);
   const [ queryContent, setQueryContent ] = useState("");
@@ -112,7 +113,7 @@ const Query = () => {
 
       </SQueryContainer>
 
-      {isLoaded && <QueryResults booksResults={booksResults}/>}
+      {isLoaded && <QueryResults booksResults={booksResults} url={url}/>}
 
     </SStickyContainer>
     </>

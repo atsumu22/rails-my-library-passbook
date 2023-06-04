@@ -6,13 +6,13 @@ import { jsx, css } from "@emotion/react";
 import styled from "@emotion/styled";
 
 const QueryResults = (props) => {
-  const { booksResults } = props;
+  const { booksResults, url } = props;
 
   console.log(booksResults);
 
   return (
     <SContainer>
-      {booksResults ? booksResults.map((bookResult, index) => <BookCard book={bookResult} key={index}/>) : <h2>お探しの本は見つかりませんでした。別のキーワードで再度検索をお願いします。</h2> }
+      {booksResults ? booksResults.map((bookResult, index) => <BookCard book={bookResult} url={url} key={index}/>) : <h2>お探しの本は見つかりませんでした。別のキーワードで再度検索をお願いします。</h2> }
     </SContainer>
   );
 };

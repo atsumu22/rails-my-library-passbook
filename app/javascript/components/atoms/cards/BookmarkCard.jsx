@@ -12,7 +12,7 @@ import DeleteModalContainer from '../modal/DeleteModalContainer';
 
 
 const BookmarkCard = (props) => {
-  const { bookData } = props;
+  const { bookData, url } = props;
   const [ logClicked, setLogClicked ] = useState(false);
   const [ DeleteClicked, setDeleteClicked ] = useState(false);
   const [ isLoaded, setIsLoaded ] = useState(false);
@@ -23,7 +23,7 @@ const BookmarkCard = (props) => {
     bookData.status = 0
     axios.defaults.headers.common['X-CSRF-Token'] = csrfToken();
     // -> important
-    axios.post('https://library-passbook.herokuapp.com/books', bookData).then((res) => {
+    axios.post(`${url}/books`, bookData).then((res) => {
       isLoaded || setIsLoaded(true);
     });
     // axios.post('http://localhost:3000/books', {
@@ -39,7 +39,7 @@ const BookmarkCard = (props) => {
 
   const onClickDeleteBook = () => {
     axios.defaults.headers.common['X-CSRF-Token'] = csrfToken();
-    axios.delete(`https://library-passbook.herokuapp.com/books/${bookData.id}`).then(() => {});
+    axios.delete(`${url}/books/${bookData.id}`).then(() => {});
     logClicked && setLogClicked(false);
     DeleteClicked || setDeleteClicked(true);
     isCall && setIsCall(false);

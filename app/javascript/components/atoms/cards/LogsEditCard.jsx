@@ -12,7 +12,7 @@ import DeleteModalContainer from '../modal/DeleteModalContainer';
 
 
 const LogsEditCard = (props) => {
-  const { bookData } = props;
+  const { bookData, url } = props;
   const [ logClicked, setLogClicked ] = useState(false);
   const [ DeleteClicked, setDeleteClicked ] = useState(false);
   const [ isLoaded, setIsLoaded ] = useState(false);
@@ -25,7 +25,7 @@ const LogsEditCard = (props) => {
 
   const onClickDeleteBook = () => {
     axios.defaults.headers.common['X-CSRF-Token'] = csrfToken();
-    axios.delete(`https://library-passbook.herokuapp.com/books/${bookData.id}`).then(() => {});
+    axios.delete(`${url}/books/${bookData.id}`).then(() => {});
     logClicked && setLogClicked(false);
     DeleteClicked || setDeleteClicked(true);
     isCall && setIsCall(false);

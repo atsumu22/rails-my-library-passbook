@@ -6,11 +6,11 @@ import { jsx, css } from "@emotion/react";
 import styled from "@emotion/styled";
 
 const BookmarkCards = (props) => {
-  const { booksFromServer } = props;
+  const { booksFromServer, url } = props;
 
   return (
     <SContaienr>
-      {booksFromServer.length > 0 ? booksFromServer.map((bookData) => <BookmarkCard bookData={bookData} key={bookData.id}/>) : <SPlaceHolder><h3>ブックマークにはまだ何も保存されていません</h3></SPlaceHolder> }
+      {booksFromServer.length > 0 ? booksFromServer.map((bookData) => <BookmarkCard bookData={bookData} url={url} key={bookData.id}/>) : <SPlaceHolder><h3>ブックマークにはまだ何も保存されていません</h3></SPlaceHolder> }
     </SContaienr>
   );
 };

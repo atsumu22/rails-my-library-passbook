@@ -6,11 +6,11 @@ import styled from "@emotion/styled";
 import LogsEditCard from '../../atoms/cards/LogsEditCard';
 
 const LogsEditCards = (props) => {
-  const { booksDatas } = props;
+  const { booksDatas, url } = props;
 
   return (
     <SLogsContaienr>
-      {booksDatas.length > 0 ? booksDatas.map((bookData) => <LogsEditCard bookData={bookData} key={bookData.id} />) : <SLogsPlaceHolder><h3>通帳にはまだ何も保存されていません</h3></SLogsPlaceHolder> }
+      {booksDatas.length > 0 ? booksDatas.map((bookData) => <LogsEditCard bookData={bookData} url={url} key={bookData.id} />) : <SLogsPlaceHolder><h3>通帳にはまだ何も保存されていません</h3></SLogsPlaceHolder> }
     </SLogsContaienr>
   );
 };

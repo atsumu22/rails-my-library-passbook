@@ -14,7 +14,7 @@
       <h5 class="mb-0"><%= @books.length %> / <%= current_user.books.where(status: 1).length %>件</h5>
     </div>
 
-    <%= react_component("molecules/bookmarkCards/BookmarkCards", {booksFromServer: @books}) %>
+    <%= react_component("molecules/bookmarkCards/BookmarkCards", {booksFromServer: @books, url: @url}) %>
 
     <%= will_paginate @books, previous_label: h("<"), next_label: h(">")   %>
   </div>
