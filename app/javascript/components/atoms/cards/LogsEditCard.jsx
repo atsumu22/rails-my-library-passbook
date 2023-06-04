@@ -25,7 +25,7 @@ const LogsEditCard = (props) => {
 
   const onClickDeleteBook = () => {
     axios.defaults.headers.common['X-CSRF-Token'] = csrfToken();
-    axios.delete(`http://localhost:3000/books/${bookData.id}`).then(() => {});
+    axios.delete(`https://library-passbook.herokuapp.com/books/${bookData.id}`).then(() => {});
     logClicked && setLogClicked(false);
     DeleteClicked || setDeleteClicked(true);
     isCall && setIsCall(false);

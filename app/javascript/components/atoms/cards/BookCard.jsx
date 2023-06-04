@@ -23,7 +23,7 @@ const BookCard = (props) => {
     const bookData = {title: book.title, author: book.author, publisher: book.publisher, price: book.price, image_url: book.imageUrl, status: 0 }
     axios.defaults.headers.common['X-CSRF-Token'] = csrfToken();
     // -> important
-    axios.post('http://localhost:3000/books', bookData)
+    axios.post('https://library-passbook.herokuapp.com/books', bookData)
       .then((res) => {
         if (res.status === 202) {
           isUpdated || setIsUpdated(true)
@@ -44,7 +44,7 @@ const BookCard = (props) => {
   const onClickPostToBookmark = () => {
     const bookData = {title: book.title, author: book.author, publisher: book.publisher, price: book.price, image_url: book.imageUrl, status: 1 }
     axios.defaults.headers.common['X-CSRF-Token'] = csrfToken();
-    axios.post('http://localhost:3000/books', bookData)
+    axios.post('https://library-passbook.herokuapp.com/books', bookData)
       .then((res) => {
         if (res.status === 202) {
           isUpdated || setIsUpdated(true)

@@ -23,7 +23,7 @@ const BookmarkCard = (props) => {
     bookData.status = 0
     axios.defaults.headers.common['X-CSRF-Token'] = csrfToken();
     // -> important
-    axios.post('http://localhost:3000/books', bookData).then((res) => {
+    axios.post('https://library-passbook.herokuapp.com/books', bookData).then((res) => {
       isLoaded || setIsLoaded(true);
     });
     // axios.post('http://localhost:3000/books', {
@@ -39,7 +39,7 @@ const BookmarkCard = (props) => {
 
   const onClickDeleteBook = () => {
     axios.defaults.headers.common['X-CSRF-Token'] = csrfToken();
-    axios.delete(`http://localhost:3000/books/${bookData.id}`).then(() => {});
+    axios.delete(`https://library-passbook.herokuapp.com/books/${bookData.id}`).then(() => {});
     logClicked && setLogClicked(false);
     DeleteClicked || setDeleteClicked(true);
     isCall && setIsCall(false);
