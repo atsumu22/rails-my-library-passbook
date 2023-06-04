@@ -2,7 +2,13 @@
   <div class="greeting">
     <%= image_tag 'logo.png', class: "greeting__image" %>
     <div class="greeting__message">
-      <h2><%= current_user.user_name %>さんの通帳です</h2>
+      <h2><%= current_user.user_name %>さんの通帳の合計は
+        <% sum = [] %>
+        <% @books.each do |book| %>
+          <% sum << book.price %>
+        <% end %>
+        ¥<%= number_with_delimiter(sum.sum) %>です
+        </h2>
     </div>
   </div>
 
@@ -42,19 +48,6 @@
         <span class="back"></span>
       </label>
 
-    </div>
-  </div>
-
-  <div class="total-value">
-    <div class="total-value__container">
-      <% sum = [] %>
-      <% @books.each do |book| %>
-        <% sum << book.price %>
-      <% end %>
-      <h3> </h3>
-      <h2>
-        ¥<%= number_with_delimiter(sum.sum) %>
-      </h2>
     </div>
   </div>
 
