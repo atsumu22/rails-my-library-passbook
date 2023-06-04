@@ -11,7 +11,7 @@
    <div class="pagenagte-container">
     <div class="pagenate-header">
       <h5 class="mb-0">登録した日付順</h5>
-      <h5 class="mb-0"><%= @books.length %> / <%= current_user.books.length %>件</h5>
+      <h5 class="mb-0"><%= @books.length %> / <%= current_user.books.where(status: 1).length %>件</h5>
     </div>
 
     <%= react_component("molecules/bookmarkCards/BookmarkCards", {booksFromServer: @books}) %>
