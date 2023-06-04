@@ -44,9 +44,9 @@ const LogsEditCard = (props) => {
           { bookData.image_url ? <img src={bookData.image_url} alt="book-image" /> : <SPlaceHolder /> }
           <div className="bookinfo">
             <div className="bookinfo__text">
-              <p className="bookinfo__text__title">{bookData.title}</p>
-              <p className="bookinfo__text__author">{bookData.author}</p>
-              <p className="bookinfo__text__publisher">{bookData.publisher}</p>
+            <p className="bookinfo__text__title">{bookData.title.length > 32 ? `${bookData.title.substr(0,32)}[..]` : bookData.title}</p>
+              <p className="bookinfo__text__author">{bookData.author.length > 15 ? `${bookData.author.substr(0,15)}[..]` : bookData.author}</p>
+              <p className="bookinfo__text__publisher">{bookData.publisher.length > 15 ? `${bookData.publisher.substr(0,15)}[..]` : bookData.publisher}</p>
               <p className="bookinfo__text__publisher">¥{bookData.price.toLocaleString()}</p>
             </div>
             <div className="bookinfo__button">

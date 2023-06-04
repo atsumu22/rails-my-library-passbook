@@ -73,9 +73,9 @@ const BookCard = (props) => {
           { book.imageUrl ? <img src={book.imageUrl} alt="book-image" /> : <SPlaceHolder /> }
           <div className="bookinfo">
             <div className="bookinfo__text">
-              <p className="bookinfo__text__title">{book.title.length > 40 ? `${book.title.substr(0,40)}[..]` : book.title}</p>
-              <p className="bookinfo__text__author">{book.author.length > 20 ? `${book.author.substr(0,20)}[..]` : book.author}</p>
-              <p className="bookinfo__text__publisher">{book.publisher.length > 20 ? `${book.publisher.substr(0,20)}[..]` : book.publisher}</p>
+              <p className="bookinfo__text__title">{book.title.length > 32 ? `${book.title.substr(0,32)}[..]` : book.title}</p>
+              <p className="bookinfo__text__author">{book.author.length > 15 ? `${book.author.substr(0,15)}[..]` : book.author}</p>
+              <p className="bookinfo__text__publisher">{book.publisher.length > 15 ? `${book.publisher.substr(0,15)}[..]` : book.publisher}</p>
               <p className="bookinfo__text__publisher">¥{book.price.toLocaleString()}</p>
             </div>
             <div className="bookinfo__button">
