@@ -34,9 +34,6 @@ const BookCard = (props) => {
       .catch((res) => {
         isError || setIsError(true)
       });
-    // axios.post('http://localhost:3000/books', {
-      // book: {bookData}}).then(() => {});
-    // console.log(bookData);
     BookmarkClicked && setBookmarkClicked(false);
     logClicked || setLogClicked(true);
   }

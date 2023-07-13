@@ -9,7 +9,7 @@ const PageContents = (props) => {
         <p className="date">{book.updated_at.toString().substr(0,10)}</p>
         <p className="title">{book.title.length > 18 ? `${book.title.substr(0,18)}[..]` : book.title}</p>
       </div>
-      <p className="price">{book.price}</p>
+      <p className="price">{book.price.toLocaleString()}</p>
     </div>
  );
 };
